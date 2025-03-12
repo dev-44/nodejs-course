@@ -1,0 +1,19 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+  <%- include('includes/navigation.ejs') %>
+    <main>
+        <% if (users.length > 0) { %>
+          <h1>List off all Users</h1>
+          <ul>
+            <% for (let user of users) { %>
+            <li class="product__title"><%= user.user %></li>
+            <% } %>
+          </ul>
+        <% } else { %>
+          <h2>No users registered yet</h2>
+        <% } %>
+    </main>
+</body>
+
+</html>
